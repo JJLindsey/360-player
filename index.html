@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>360 Audio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.2/dist/amplitude.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id='player-container'>
+            <div id='list-screen' class='slide-in-top'>
+                <div id='list-screen-header' class='hide-playlist'>
+                    <i id='up-arrow' class="bi bi-chevron-compact-up">Hide Playlist</i>
+                </div>
+
+                <div id='list'>
+                    <div class='song amplitude-song-container amplitude-play-pause' data-amplitude-song-index='0'>
+                        <span class="song-number-now-playing">
+                            <span class="number">1</span>
+                            <i  id='now-playing class=bi bi-volume-up'></i>
+                        </span>
+
+                        <div class='song-meta-container'>
+                            <span class='song-name' data-amplitude-song-info='name' data-amplitude-song-index='0'></span>
+                            <span class='song-artist-album'> - </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
