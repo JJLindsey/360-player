@@ -9,7 +9,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.2/dist/amplitude.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -95,22 +94,47 @@
             <progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
             <progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
             </div>
-        </div>
-        <div id='player-middle'>
-            <div id="time-container">
-                <span class="amplitude-current-time time-container"></span>
-                <span class="amplitude-duration-time time-container"></span>
+            <div id='player-middle'>
+                <div id="time-container">
+                    <span class="amplitude-current-time time-container"></span>
+                    <span class="amplitude-duration-time time-container"></span>
+                </div>
+                <div id="meta-container">
+                <span data-amplitude-song-info="name" class="song-name"></span>
+                <div class="song-artist-album">
+                    <span data-amplitude-song-info="artist"></span>
+                </div>
+                </div>
             </div>
-            <div id="meta-container">
-            <span data-amplitude-song-info="name" class="song-name"></span>
-            <div class="song-artist-album">
-                <span data-amplitude-song-info="artist"></span>
-            </div>
+            <div id="player-bottom">
+                <div id="control-container">
+                    <div id="shuffle-container">
+                    <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+                    </div>
+        
+                    <div id="prev-container">
+                    <div class="amplitude-prev" id="previous"></div>
+                    </div>
+        
+                    <div id="play-pause-container">
+                    <div class="amplitude-play-pause" id="play-pause"></div>
+                    </div>
+        
+                    <div id="next-container">
+                    <div class="amplitude-next" id="next"></div>
+                    </div>
+        
+                    <div id="repeat-container">
+                    <div class="amplitude-repeat" id="repeat"></div>
+                    </div>
+                </div>
+                <div id="volume-container">
+                    <i class="bi bi-volume-down-fill"></i><input type="range" class="amplitude-volume-slider" step=".1"/>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@3.2.2/dist/amplitude.js"></script>
     <script src="audio.js"></script>
 </body>
 
