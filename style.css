@@ -9,11 +9,11 @@
     justify-content: center;
 }
 
-.music img {
+.audio-player img {
     width: 300px;
 }
 
-.music {
+.audio-player {
     width: 85%;
     padding: 30px;
     box-sizing: border-box;
@@ -23,4 +23,11 @@
 
 .info {
     color: #fff;
+    margin-left: 30px;
+    flex: 1;
+}
+
+.info p {
+    font-size: 20px;
+    margin: 10px 0 60px;
 }
