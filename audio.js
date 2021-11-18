@@ -12,7 +12,7 @@ const initializeWavesurfer = () => {
     return WaveSurfer.create({
         container: '#waveform',
         responsive: true,
-        height:80,
+        height: 80,
         waveColor: '#0ad2fa',
         progressColor: '#f27c1b',
     })
@@ -63,7 +63,27 @@ const toggleMute = () => {
 }
 //load wavesurfer
 const wavesurfer = initializeWavesurfer()
-wavesurfer.load('assets/audio/Waiting On m.mp3')
+wavesurfer.load('/assets/audio/Waiting On m.mp3')
 
+window.addEventListener("load", setVolumeLocalStorage)
 
+playButton.addEventListener("click", togglePlay)
+volumeIcon.addEventListener("click", toggleMute)
+volumeSlider.addEventListener("click", handleVolumeChange)
 
+//wavesurfer events
+wavesurfer.on("ready", () => {
+    wavesurfer.setVolume(volumeSlider.value / 100)
+//audio track duration
+    const duration = wavesurfer.getDuration()
+    totalDuration.innerHTML = formatTimecode(duration)
+})
+
+wavesurfer.on("audioprocess", () => {
+    const time = wavesurfer.getCurrentTime()
+    currentTime.innerHTML = formatTimecode(time)
+})
+
+wavesurfer.on("finish", () => {
+    playButtonIcon.src = "assets/images/playBtn.png"
+})
