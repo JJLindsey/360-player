@@ -63,7 +63,7 @@ const toggleMute = () => {
 }
 //load wavesurfer
 const wavesurfer = initializeWavesurfer()
-wavesurfer.load('/assets/audio/Waiting On m.mp3')
+wavesurfer.load('/assets/WaitingOnm.mp3')
 
 window.addEventListener("load", setVolumeLocalStorage)
 

@@ -23,7 +23,14 @@ wavesurfer = WaveSurfer.create({
 });
 
 //load audio file
-wavesurfer.load("Waiting On m.mp3");
+wavesurfer.load("/assets/audio/Moog.wav");
+
+//update song details
+// function loadSong(song) {
+
+//     audio.src = `assets/${song}.wav`
+//     title.innerText = song
+// }
 
 //play and pause a player
 playPause.addEventListener("click", function (e) {
