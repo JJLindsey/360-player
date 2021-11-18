@@ -25,7 +25,7 @@
     display: flex;
     padding: 30px;
     box-sizing: border-box;
-    background:rgb(213, 213, 213);
+    background:rgb(0, 0, 0);
     border-radius:black;
     box-shadow: 0.2rem 0.2rem 1rem 0.2rem rgb(69, 68, 68);
 }
@@ -67,7 +67,7 @@
 }
 
 .timecode {
-    color:turquoise;
+    color:rgb(244, 247, 247);
 }
 
 .volume {
@@ -78,7 +78,7 @@
     cursor: pointer;
 }
 .volume-icon img {
-    color: white;
+    color: rgb(155, 34, 34);
 }
 .volume-slider {
     margin: 0 1rem;
